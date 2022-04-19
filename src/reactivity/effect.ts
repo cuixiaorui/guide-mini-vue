@@ -80,6 +80,8 @@ export function isTracking() {
 
 export function trigger(target, key) {
   let depsMap = targetMap.get(target);
+  if (!depsMap) return;
+
   let dep = depsMap.get(key);
   triggerEffects(dep);
 }
