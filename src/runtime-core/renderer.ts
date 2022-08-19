@@ -93,7 +93,7 @@ export function createRenderer(options) {
 
     if (shapeFlag & ShapeFlags.TEXT_CHILDREN) {
       if (prevShapeFlag & ShapeFlags.ARRAY_CHILDREN) {
-        unmountChildren(n1.children);
+        unmountChildren(c1);
       }
       if (c1 !== c2) {
         hostSetElementText(container, c2);
